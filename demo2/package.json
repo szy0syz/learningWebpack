@@ -1,0 +1,27 @@
+{
+  "name": "learningwebpack",
+  "version": "1.0.0",
+  "description": "Jerry learning wepback",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szy0syz/learningWebpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "szy0syz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szy0syz/learningWebpack/issues"
+  },
+  "homepage": "https://github.com/szy0syz/learningWebpack#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0"
+  }
+}
