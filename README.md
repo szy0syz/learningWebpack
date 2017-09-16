@@ -31,6 +31,7 @@ webpack是一个模块打包器。任何静态资源都可以视作模块，然�
     - 具体代码请见[demo1](/demo1/entry.js)
 
 ```js
+// 通过两个loader先转换再插入到打包流中
 require('!style-loader!css-loader!./style.css');
 document.write('hello');
 ```
