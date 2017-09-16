@@ -123,3 +123,39 @@ document.write('hello');
 require('!style-loader!css-loader!./style.css');
 document.write('hello');
 ```
+
+## demo2：config方式使用加载器
+
+- 新建webpack.config.js
+- 同时使用`style-loader` 和 `'css-loader'`
+- 在entry.js相应地方引入模块`style.css`
+
+```js
+// webpack.config.js
+module.exports = {
+  entry: "./entry.js", // 设置打包的入口文件，每有一个键值对，就是一个入口文件
+  output: { // 配置打包结果的输出
+    path: __dirname,       // 定义输出的文件夹
+    filename: "bundle.js" // 定义了打包结果文件的名称
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  }
+};
+
+///////////////////
+
+// entry.js
+// css已经被当做模块加载大流中，我们直接引用
+require('./style.css');
+document.write('hello');
+```
