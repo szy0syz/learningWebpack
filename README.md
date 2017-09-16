@@ -22,3 +22,15 @@ webpack是一个模块打包器。任何静态资源都可以视作模块，然�
 - `webpack --config`  以某个 config作为打包
 - `webpack --help`  更多命令
 - 如果全局安装后最好像gulp一样在项目内也安装一道：`npm install webpack --save-dev`
+
+
+## demo1：CLI方式使用加载器
+
+- 使用cli命令`webpack ./entry.js bundle.js`生成js和css的打包文件`bundle.js`
+    - 跟 `gulp` 原理一样，`require`代码文件流是从又往左流的：首先最后边读取`style.css`文件，然后经过`css-loader` 进行转换，再经过 `style-loader` 转换成可以加载js代码，最后丢该webpack就行了
+    - 具体代码请见[demo1](/demo1/entry.js)
+
+```js
+require('!style-loader!css-loader!./style.css');
+document.write('hello');
+```
