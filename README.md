@@ -159,3 +159,14 @@ module.exports = {
 require('./style.css');
 document.write('hello');
 ```
+
+## demo3: 插件
+
+
+
+## demo4：url-loader
+
+
+
+## demo5：别名
+
