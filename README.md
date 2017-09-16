@@ -15,10 +15,10 @@ webpack是一个模块打包器。任何静态资源都可以视作模块，然�
 ## 安装及使用
 
 - `npm install webpack -g`
-- webpack [entry.js] [output.js]
-- webpack -w  提供watchfa方法，实时进行打包更新
-- webpack -p  对打包后的文件j信息压缩
-- webpack -d  提供 source map，方便调试
-- webpack --config  以某个 config作为打包
-- webpack --help  更多命令
-- 如果全局安装后最好像gulp一样项目内也安装一道：`npm install webpack --save-dev`
+- `webpack [entry.js] [output.js]`
+- `webpack -w`  提供watchfa方法，实时进行打包更新
+- `webpack -p`  对打包后的文件j信息压缩
+- `webpack -d`  提供 source map，方便调试
+- `webpack --config`  以某个 config作为打包
+- `webpack --help`  更多命令
+- 如果全局安装后最好像gulp一样在项目内也安装一道：`npm install webpack --save-dev`
